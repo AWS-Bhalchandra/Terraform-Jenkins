@@ -13,9 +13,9 @@ pipeline {
         stage('checkout') {
             steps {
                  script{
-                        dir("terraform")
-                        {
-                            git "https://github.com/AWS-Bhalchandra/Terraform-Jenkins.git"
+                        dir("terraform"){
+                            git branch: 'main',
+                               url: 'https://github.com/AWS-Bhalchandra/Terraform-Jenkins.git'
                         }
                     }
                 }
